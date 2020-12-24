@@ -7,5 +7,5 @@ run:
   - tar -xf ffmpeg.tar.xz -C ffmpeg --strip-components=1
   - go build main.go pkged.go
 # which files / folders to deploy after build
-deploy: [ main, config.yaml, ffmpeg, data, static ]
+deploy: [ main, config.yaml, ffmpeg, data, static, webroot ]
 #xaaa
