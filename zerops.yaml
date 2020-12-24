@@ -2,6 +2,9 @@
 use: [ go@1 ]
 # which commands to run to build
 run:
+  - wget -o ffmpeg.tar.xz https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
+  - mkdir ffmpeg
+  - tar -xf ffmpeg.tar.xz -C ffmpeg --strip-components=1
   - go build main.go pkged.go
 # which files / folders to deploy after build
-deploy: [ main, config.yaml ]
+deploy: [ main, config.yaml, ffmpeg ]
