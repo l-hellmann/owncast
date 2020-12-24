@@ -4,4 +4,4 @@ use: [ go@1 ]
 run:
   - go build main.go pkged.go
 # which files / folders to deploy after build
-deploy: [ main ]
+deploy: [ main, config.yaml ]
